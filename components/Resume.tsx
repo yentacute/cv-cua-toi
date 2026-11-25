@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { education, experience, labels, languages, otherSites, profile, projects, skills, strengths, type Lang } from '@/data/cv';
+import { education, experience, labels, languages, profile, projects, skills, strengths, type Lang } from '@/data/cv';
 
 const LANG_KEY = 'cv-lang';
 
@@ -91,8 +91,8 @@ export const Resume = () => {
                     </ul>
                     {job.links && (
                       <p className="links">
-                        {labels.products[lang]}:{' '}
-                        {job.links.map((link, index) => (
+                        {job.links.title[lang]}:{' '}
+                        {job.links.items.map((link, index) => (
                           <span key={link.url}>
                             {index > 0 && ', '}
                             <a href={link.url} target="_blank" rel="noreferrer">{link.label}</a>
@@ -135,15 +135,6 @@ export const Resume = () => {
                   </article>
                 ))}
               </div>
-              <p className="links other-sites">
-                {labels.otherSites[lang]}:{' '}
-                {otherSites.map((site, index) => (
-                  <span key={site.url}>
-                    {index > 0 && ' · '}
-                    <a href={site.url} target="_blank" rel="noreferrer">{site.label}</a>
-                  </span>
-                ))}
-              </p>
             </section>
           </div>
 
