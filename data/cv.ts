@@ -37,8 +37,8 @@ export type SkillGroup = {
 export const profile = {
   name: 'Trần Thị Yên',
   title: {
-    en: 'Frontend Web Developer',
-    vi: 'Lập trình viên Frontend Web',
+    en: 'Frontend Web Developer · React / Next.js / Vue.js',
+    vi: 'Lập trình viên Frontend Web · React / Next.js / Vue.js',
   },
   location: { en: 'Hanoi, Vietnam', vi: 'Hà Nội, Việt Nam' },
   email: 'lanyentran@gmail.com',
@@ -47,8 +47,8 @@ export const profile = {
   // Optional: add your LinkedIn URL here to show it in the header.
   linkedin: '',
   summary: {
-    en: 'Frontend developer with 5+ years of experience building web products with Vue.js, React and vanilla JavaScript. Started by crafting pixel-perfect Shopify, BigCommerce and Magento storefronts for clients in Australia and Europe, then moved on to building internal business systems (dashboards, ERP/MES tools) with Vue.js and React. Detail-oriented, quick to pick up new technologies, and used to working directly with international clients to clarify requirements and ship on time.',
-    vi: 'Lập trình viên Frontend với hơn 5 năm kinh nghiệm phát triển web bằng Vue.js, React và JavaScript thuần. Bắt đầu với việc xây dựng giao diện Shopify, BigCommerce, Magento chuẩn pixel-perfect cho khách hàng Úc và châu Âu, sau đó phát triển các hệ thống nội bộ (dashboard, công cụ ERP/MES) bằng Vue.js và React. Tỉ mỉ, học công nghệ mới nhanh, quen làm việc trực tiếp với khách hàng nước ngoài để làm rõ yêu cầu và bàn giao đúng hạn.',
+    en: 'Frontend developer with 5+ years of experience building web products with React, Next.js and Vue.js. Currently building internal applications with React and Vue.js at F88, and comfortable with Next.js (App Router, static export, TypeScript). Started by crafting pixel-perfect Shopify, BigCommerce and Magento storefronts for clients in Australia and Europe, then moved on to internal business systems (dashboards, ERP/MES tools). Detail-oriented, quick to pick up new technologies, and used to working directly with international clients to clarify requirements and ship on time.',
+    vi: 'Lập trình viên Frontend với hơn 5 năm kinh nghiệm phát triển web bằng React, Next.js và Vue.js. Hiện đang xây dựng ứng dụng nội bộ bằng React và Vue.js tại F88, thành thạo Next.js (App Router, static export, TypeScript). Bắt đầu với việc xây dựng giao diện Shopify, BigCommerce, Magento chuẩn pixel-perfect cho khách hàng Úc và châu Âu, sau đó phát triển các hệ thống nội bộ (dashboard, công cụ ERP/MES). Tỉ mỉ, học công nghệ mới nhanh, quen làm việc trực tiếp với khách hàng nước ngoài để làm rõ yêu cầu và bàn giao đúng hạn.',
   } satisfies Localized,
 };
 
@@ -64,17 +64,19 @@ export const experience: Job[] = [
     },
     highlights: {
       en: [
-        'Develop and maintain internal business tools with Vue.js and React.',
+        'Develop and maintain internal business tools with React and Vue.js.',
+        'Build React screens with hooks, reusable components and TypeScript types.',
         'Build reusable UI components and forms shared across modules.',
         'Integrate REST APIs and collaborate with backend, QA and business teams.',
       ],
       vi: [
-        'Phát triển và bảo trì các công cụ nghiệp vụ nội bộ bằng Vue.js và React.',
+        'Phát triển và bảo trì các công cụ nghiệp vụ nội bộ bằng React và Vue.js.',
+        'Xây dựng màn hình React với hooks, component tái sử dụng và TypeScript.',
         'Xây dựng component và form dùng chung giữa các module.',
         'Tích hợp REST API, phối hợp với đội backend, QA và nghiệp vụ.',
       ],
     },
-    stack: ['Vue.js', 'React', 'TypeScript', 'REST API'],
+    stack: ['React', 'Vue.js', 'TypeScript', 'REST API'],
   },
   {
     company: 'Insights',
@@ -160,6 +162,28 @@ export const experience: Job[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    name: 'Personal CV website',
+    url: 'https://yentacute.github.io/cv-cua-toi/',
+    period: '2026',
+    description: {
+      en: 'This site: a bilingual (EN/VI) online CV with a print-ready PDF layout, deployed on GitHub Pages.',
+      vi: 'Chính trang này: CV online song ngữ (EN/VI), có bản in PDF, deploy trên GitHub Pages.',
+    },
+    responsibilities: {
+      en: [
+        'Built with Next.js App Router, React and TypeScript, exported as a static site.',
+        'Responsive layout, language switch saved in localStorage, A4 print stylesheet.',
+        'CI/CD with GitHub Actions deploying to GitHub Pages.',
+      ],
+      vi: [
+        'Xây dựng bằng Next.js App Router, React, TypeScript, xuất static site.',
+        'Responsive, chuyển ngôn ngữ lưu bằng localStorage, stylesheet in A4.',
+        'CI/CD bằng GitHub Actions deploy lên GitHub Pages.',
+      ],
+    },
+    stack: ['Next.js', 'React', 'TypeScript', 'CSS', 'GitHub Actions'],
+  },
   {
     name: 'Minimog',
     url: 'https://themeforest.net/item/minimog-the-high-converting-shopify-theme/33380968',
@@ -350,8 +374,12 @@ export const education = {
 
 export const skills: SkillGroup[] = [
   {
+    title: { en: 'React ecosystem', vi: 'Hệ sinh thái React' },
+    items: ['React', 'Next.js (App Router)', 'React Hooks', 'TypeScript'],
+  },
+  {
     title: { en: 'Frontend', vi: 'Frontend' },
-    items: ['HTML/CSS', 'JavaScript', 'jQuery', 'Vue 2 & 3', 'Pinia', 'React'],
+    items: ['Vue 2 & 3', 'Pinia', 'JavaScript (ES6+)', 'HTML/CSS', 'jQuery'],
   },
   {
     title: { en: 'Styling', vi: 'Styling' },
@@ -375,12 +403,14 @@ export const languages: { name: Localized; level: Localized }[] = [
 export const strengths: LocalizedList = {
   en: [
     '5+ years of hands-on frontend experience',
+    'Hands-on with React and Next.js, plus Vue 2/3',
     'Worked with clients in Australia and Europe',
     'Pixel-perfect delivery from Figma/PSD',
     'Quick to learn new technologies',
   ],
   vi: [
     'Hơn 5 năm kinh nghiệm thực tế về frontend',
+    'Có kinh nghiệm thực tế với React, Next.js và Vue 2/3',
     'Làm việc với khách hàng Úc và châu Âu',
     'Giao diện chuẩn pixel-perfect từ Figma/PSD',
     'Học công nghệ mới nhanh',
