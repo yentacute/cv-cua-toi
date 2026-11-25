@@ -75,6 +75,16 @@ p { margin: 0; text-wrap: pretty; }
   background: linear-gradient(135deg, #1f2430 0%, #2f3a56 100%);
   color: #fff;
 }
+.identity { display: flex; align-items: center; gap: 24px; }
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 3px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
 .hero h1 { font-size: 36px; letter-spacing: -0.02em; }
 .hero .role { margin-top: 4px; font-size: 18px; color: #b9c6ff; font-weight: 500; }
 .hero .badge {
@@ -156,6 +166,8 @@ h2 {
   .hero, .grid { padding: 28px 20px; }
   .hero h1 { font-size: 28px; }
   .grid { grid-template-columns: 1fr; gap: 32px; }
+  .identity { gap: 16px; }
+  .avatar { width: 88px; height: 88px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -170,6 +182,7 @@ h2 {
   .page { box-shadow: none; border-radius: 0; margin: 0; max-width: none; }
   .hero { padding: 0 0 16px; background: none; color: var(--text); border-bottom: 2px solid var(--text); }
   .hero .role { color: var(--accent); }
+  .avatar { width: 96px; height: 96px; border-color: var(--line); box-shadow: none; }
   .hero .badge { background: var(--accent-soft); color: #1d4fc4; padding: 2px 10px; margin-top: 8px; }
   .hero a { color: var(--text); }
   body { font-size: 12px; }

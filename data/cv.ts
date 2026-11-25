@@ -44,6 +44,8 @@ export const profile = {
   email: 'lanyentran@gmail.com',
   phone: '0899 264 583',
   github: 'https://github.com/yentacute',
+  // Square photo in public/. Set to '' to hide.
+  avatar: '/avatar.jpg',
   // Optional: add your LinkedIn URL here to show it in the header.
   linkedin: '',
   summary: {

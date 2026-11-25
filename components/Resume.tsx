@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { education, experience, labels, languages, profile, projects, skills, strengths, type Lang } from '@/data/cv';
 
 const LANG_KEY = 'cv-lang';
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
 const formatMonth = (value: string, lang: Lang) => {
   const [year, month] = value.split('-');
@@ -49,12 +50,19 @@ export const Resume = () => {
 
       <main className="page">
         <header className="hero">
-          <div>
+          <div className="identity">
+            {profile.avatar && (
+              // Plain img: the site is a static export, so next/image optimization is off anyway.
+              // eslint-disable-next-line @next/next/no-img-element
+              <img className="avatar" src={`${BASE_PATH}${profile.avatar}`} alt={profile.name} width={120} height={120} />
+            )}
+            <div>
             <h1>{profile.name}</h1>
             <p className="role">{profile.title[lang]}</p>
             <p className="badge">
               <strong>{totalYears}+</strong> {labels.yearsExp[lang]}
             </p>
+            </div>
           </div>
           <ul className="contact" aria-label={labels.contact[lang]}>
             <li><a href={`mailto:${profile.email}`}>{profile.email}</a></li>
