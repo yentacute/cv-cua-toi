@@ -49,8 +49,8 @@ export const profile = {
   // Optional: add your LinkedIn URL here to show it in the header.
   linkedin: '',
   summary: {
-    en: 'Frontend developer with 5+ years of experience building web products with React, Next.js and Vue.js. Currently building internal applications with React and Vue.js at F88, and comfortable with Next.js (App Router, static export, TypeScript). Started by crafting pixel-perfect Shopify, BigCommerce and Magento storefronts for clients in Australia and Europe, then moved on to internal business systems (dashboards, ERP/MES tools). Detail-oriented, quick to pick up new technologies, and used to working directly with international clients to clarify requirements and ship on time.',
-    vi: 'Lập trình viên Frontend với hơn 5 năm kinh nghiệm phát triển web bằng React, Next.js và Vue.js. Hiện đang xây dựng ứng dụng nội bộ bằng React và Vue.js tại F88, thành thạo Next.js (App Router, static export, TypeScript). Bắt đầu với việc xây dựng giao diện Shopify, BigCommerce, Magento chuẩn pixel-perfect cho khách hàng Úc và châu Âu, sau đó phát triển các hệ thống nội bộ (dashboard, công cụ ERP/MES). Tỉ mỉ, học công nghệ mới nhanh, quen làm việc trực tiếp với khách hàng nước ngoài để làm rõ yêu cầu và bàn giao đúng hạn.',
+    en: 'Frontend developer with 5+ years of experience building web products with React, Next.js and Vue.js. Currently building internal applications with React and Vue.js at F88, and comfortable with Next.js (App Router, static export, TypeScript). Started by crafting pixel-perfect Shopify, BigCommerce and Magento storefronts for clients in Australia and Europe, then moved on to internal business systems (dashboards, ERP/MES tools). Uses AI tools daily (Claude Code, ChatGPT, GitHub Copilot) to ship faster: scaffolding, refactoring, debugging and writing tests, always reviewing the output. Detail-oriented, quick to pick up new technologies, and used to working directly with international clients to clarify requirements and ship on time.',
+    vi: 'Lập trình viên Frontend với hơn 5 năm kinh nghiệm phát triển web bằng React, Next.js và Vue.js. Hiện đang xây dựng ứng dụng nội bộ bằng React và Vue.js tại F88, thành thạo Next.js (App Router, static export, TypeScript). Bắt đầu với việc xây dựng giao diện Shopify, BigCommerce, Magento chuẩn pixel-perfect cho khách hàng Úc và châu Âu, sau đó phát triển các hệ thống nội bộ (dashboard, công cụ ERP/MES). Sử dụng công cụ AI hằng ngày (Claude Code, ChatGPT, GitHub Copilot) để làm việc nhanh hơn: dựng khung code, refactor, debug, viết test, luôn tự review kết quả. Tỉ mỉ, học công nghệ mới nhanh, quen làm việc trực tiếp với khách hàng nước ngoài để làm rõ yêu cầu và bàn giao đúng hạn.',
   } satisfies Localized,
 };
 
@@ -177,14 +177,16 @@ export const projects: Project[] = [
         'Built with Next.js App Router, React and TypeScript, exported as a static site.',
         'Responsive layout, language switch saved in localStorage, A4 print stylesheet.',
         'CI/CD with GitHub Actions deploying to GitHub Pages.',
+        'Built with an AI-assisted workflow (Claude Code): planning, coding and review in pull requests.',
       ],
       vi: [
         'Xây dựng bằng Next.js App Router, React, TypeScript, xuất static site.',
         'Responsive, chuyển ngôn ngữ lưu bằng localStorage, stylesheet in A4.',
         'CI/CD bằng GitHub Actions deploy lên GitHub Pages.',
+        'Xây dựng với quy trình có AI hỗ trợ (Claude Code): lên kế hoạch, code và review qua pull request.',
       ],
     },
-    stack: ['Next.js', 'React', 'TypeScript', 'CSS', 'GitHub Actions'],
+    stack: ['Next.js', 'React', 'TypeScript', 'GitHub Actions', 'Claude Code'],
   },
   {
     name: 'Minimog',
@@ -380,6 +382,10 @@ export const skills: SkillGroup[] = [
     items: ['React', 'Next.js (App Router)', 'React Hooks', 'TypeScript'],
   },
   {
+    title: { en: 'AI-assisted development', vi: 'Phát triển với AI' },
+    items: ['Claude Code', 'ChatGPT', 'GitHub Copilot', 'Prompt engineering', 'AI code review & debugging'],
+  },
+  {
     title: { en: 'Frontend', vi: 'Frontend' },
     items: ['Vue 2 & 3', 'Pinia', 'JavaScript (ES6+)', 'HTML/CSS', 'jQuery'],
   },
@@ -406,6 +412,7 @@ export const strengths: LocalizedList = {
   en: [
     '5+ years of hands-on frontend experience',
     'Hands-on with React and Next.js, plus Vue 2/3',
+    'AI-assisted development: faster delivery with Claude Code, ChatGPT and Copilot',
     'Worked with clients in Australia and Europe',
     'Pixel-perfect delivery from Figma/PSD',
     'Quick to learn new technologies',
@@ -413,6 +420,7 @@ export const strengths: LocalizedList = {
   vi: [
     'Hơn 5 năm kinh nghiệm thực tế về frontend',
     'Có kinh nghiệm thực tế với React, Next.js và Vue 2/3',
+    'Phát triển với AI: tăng tốc công việc bằng Claude Code, ChatGPT, Copilot',
     'Làm việc với khách hàng Úc và châu Âu',
     'Giao diện chuẩn pixel-perfect từ Figma/PSD',
     'Học công nghệ mới nhanh',
