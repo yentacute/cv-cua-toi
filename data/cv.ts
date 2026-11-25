@@ -49,8 +49,8 @@ export const profile = {
   // Optional: add your LinkedIn URL here to show it in the header.
   linkedin: '',
   summary: {
-    en: 'Frontend developer with 5+ years of experience building web products with React, Next.js and Vue.js. Currently building internal applications with React and Vue.js at F88, and comfortable with Next.js (App Router, static export, TypeScript). Started by crafting pixel-perfect Shopify, BigCommerce and Magento storefronts for clients in Australia and Europe, then moved on to internal business systems (dashboards, ERP/MES tools). Uses Claude (Claude Code) and OpenAI Codex daily to ship faster: scaffolding, refactoring, debugging and writing tests, always reviewing the output. Detail-oriented, quick to pick up new technologies, and used to working directly with international clients to clarify requirements and ship on time.',
-    vi: 'Lập trình viên Frontend với hơn 5 năm kinh nghiệm phát triển web bằng React, Next.js và Vue.js. Hiện đang xây dựng ứng dụng nội bộ bằng React và Vue.js tại F88, thành thạo Next.js (App Router, static export, TypeScript). Bắt đầu với việc xây dựng giao diện Shopify, BigCommerce, Magento chuẩn pixel-perfect cho khách hàng Úc và châu Âu, sau đó phát triển các hệ thống nội bộ (dashboard, công cụ ERP/MES). Sử dụng Claude (Claude Code) và OpenAI Codex hằng ngày để làm việc nhanh hơn: dựng khung code, refactor, debug, viết test, luôn tự review kết quả. Tỉ mỉ, học công nghệ mới nhanh, quen làm việc trực tiếp với khách hàng nước ngoài để làm rõ yêu cầu và bàn giao đúng hạn.',
+    en: 'Frontend developer with 5+ years of experience building web products with React, Next.js and Vue.js. Currently building internal applications with React and Vue.js at F88, and comfortable with Next.js (App Router, static export, TypeScript). Started by crafting pixel-perfect Shopify, BigCommerce and Magento storefronts for clients in Australia and Europe, then moved on to building internal business applications. Uses Claude (Claude Code) and OpenAI Codex daily to ship faster: scaffolding, refactoring, debugging and writing tests, always reviewing the output. Detail-oriented, quick to pick up new technologies, and used to working directly with international clients to clarify requirements and ship on time.',
+    vi: 'Lập trình viên Frontend với hơn 5 năm kinh nghiệm phát triển web bằng React, Next.js và Vue.js. Hiện đang xây dựng ứng dụng nội bộ bằng React và Vue.js tại F88, thành thạo Next.js (App Router, static export, TypeScript). Bắt đầu với việc xây dựng giao diện Shopify, BigCommerce, Magento chuẩn pixel-perfect cho khách hàng Úc và châu Âu, sau đó phát triển các ứng dụng nghiệp vụ nội bộ. Sử dụng Claude (Claude Code) và OpenAI Codex hằng ngày để làm việc nhanh hơn: dựng khung code, refactor, debug, viết test, luôn tự review kết quả. Tỉ mỉ, học công nghệ mới nhanh, quen làm việc trực tiếp với khách hàng nước ngoài để làm rõ yêu cầu và bàn giao đúng hạn.',
   } satisfies Localized,
 };
 
@@ -102,31 +102,6 @@ export const experience: Job[] = [
       ],
     },
     stack: ['HTML/CSS', 'Liquid', 'JavaScript', 'SCSS', 'Figma'],
-  },
-  {
-    company: 'IOTLink',
-    role: { en: 'Front End Developer', vi: 'Lập trình viên Front End' },
-    start: '2023-01',
-    end: '2023-11',
-    summary: {
-      en: 'Developed projects with Vue 2/3, including ERP and MES systems.',
-      vi: 'Phát triển các dự án bằng Vue 2/3, bao gồm hệ thống ERP và MES.',
-    },
-    highlights: {
-      en: [
-        'Developed projects with HTML/CSS, Vue 2/3, JavaScript and SCSS.',
-        'Created new features and optimized existing ones following Figma designs.',
-        'Supported customers with their issues and worked with the team to implement tasks and find solutions.',
-        'Worked with ERP and MES systems.',
-      ],
-      vi: [
-        'Phát triển dự án bằng HTML/CSS, Vue 2/3, JavaScript, SCSS.',
-        'Làm tính năng mới và tối ưu tính năng có sẵn theo thiết kế Figma.',
-        'Hỗ trợ khách hàng xử lý vấn đề, phối hợp với team triển khai task và tìm giải pháp.',
-        'Làm việc với hệ thống ERP, MES.',
-      ],
-    },
-    stack: ['HTML/CSS', 'Vue 2/3', 'JavaScript', 'SCSS', 'Figma'],
   },
   {
     company: 'AHT Tech JSC',
@@ -253,29 +228,6 @@ export const projects: Project[] = [
       ],
     },
     stack: ['Shopify', 'HTML/CSS', 'Liquid', 'JavaScript', 'SCSS'],
-  },
-  {
-    name: 'Industrial Zone Management',
-    period: '01/2023 – 05/2023',
-    client: { en: 'Vietnam', vi: 'Việt Nam' },
-    teamSize: 6,
-    description: {
-      en: 'Management system for an industrial zone.',
-      vi: 'Hệ thống quản lý khu công nghiệp.',
-    },
-    responsibilities: {
-      en: [
-        'Built the layout and dashboard features: data management, map, users and roles; built the homepage.',
-        'Worked with Django APIs to build frontend features; clarified requirements with customers and teammates.',
-        'Researched project technologies; maintained, optimized code and fixed bugs.',
-      ],
-      vi: [
-        'Làm layout và tính năng dashboard: quản lý dữ liệu, bản đồ, người dùng, phân quyền; làm trang chủ.',
-        'Làm việc với API Django để xây dựng tính năng frontend; làm rõ yêu cầu với khách hàng và team.',
-        'Tìm hiểu công nghệ dự án; bảo trì, tối ưu code, sửa lỗi.',
-      ],
-    },
-    stack: ['HTML', 'JavaScript', 'jQuery', 'Bootstrap', 'Axios', 'Vue 2/3', 'Fetch API'],
   },
   {
     name: 'Piksters',
