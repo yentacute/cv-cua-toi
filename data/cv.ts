@@ -22,8 +22,8 @@ export type Project = {
   name: string;
   url?: string;
   period: string;
-  client: Localized;
-  teamSize: number;
+  client?: Localized;
+  teamSize?: number;
   description: Localized;
   responsibilities: LocalizedList;
   stack: string[];
@@ -98,11 +98,6 @@ export const experience: Job[] = [
       ],
     },
     stack: ['HTML/CSS', 'Liquid', 'JavaScript', 'SCSS', 'Figma'],
-    links: { title: { en: 'Products', vi: 'Sản phẩm' }, items: [
-      { label: 'Minimog', url: 'https://themeforest.net/item/minimog-the-high-converting-shopify-theme/33380968' },
-      { label: 'Zest', url: 'https://themes.shopify.com/themes/zest/styles/flairy/preview' },
-      { label: 'Megamog', url: 'https://demo.megamog.co/' },
-    ] },
   },
   {
     company: 'IOTLink',
@@ -165,6 +160,72 @@ export const experience: Job[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    name: 'Minimog',
+    url: 'https://themeforest.net/item/minimog-the-high-converting-shopify-theme/33380968',
+    period: '12/2023 – 09/2024',
+    description: {
+      en: 'Shopify theme sold on ThemeForest (Insights).',
+      vi: 'Shopify theme bán trên ThemeForest (Insights).',
+    },
+    responsibilities: {
+      en: [
+        'Developed theme features with HTML/CSS, Liquid, JavaScript and SCSS.',
+        'Created new features and optimized existing ones following Figma designs.',
+        'Supported customers with their issues.',
+      ],
+      vi: [
+        'Phát triển tính năng theme bằng HTML/CSS, Liquid, JavaScript, SCSS.',
+        'Làm tính năng mới và tối ưu tính năng có sẵn theo thiết kế Figma.',
+        'Hỗ trợ khách hàng xử lý vấn đề.',
+      ],
+    },
+    stack: ['Shopify', 'HTML/CSS', 'Liquid', 'JavaScript', 'SCSS'],
+  },
+  {
+    name: 'Zest',
+    url: 'https://themes.shopify.com/themes/zest/styles/flairy/preview',
+    period: '12/2023 – 09/2024',
+    description: {
+      en: 'Shopify theme on the official Shopify Theme Store (Insights).',
+      vi: 'Shopify theme trên Shopify Theme Store chính thức (Insights).',
+    },
+    responsibilities: {
+      en: [
+        'Developed theme features with HTML/CSS, Liquid, JavaScript and SCSS.',
+        'Created new features and optimized existing ones following Figma designs.',
+        'Supported customers with their issues.',
+      ],
+      vi: [
+        'Phát triển tính năng theme bằng HTML/CSS, Liquid, JavaScript, SCSS.',
+        'Làm tính năng mới và tối ưu tính năng có sẵn theo thiết kế Figma.',
+        'Hỗ trợ khách hàng xử lý vấn đề.',
+      ],
+    },
+    stack: ['Shopify', 'HTML/CSS', 'Liquid', 'JavaScript', 'SCSS'],
+  },
+  {
+    name: 'Megamog',
+    url: 'https://demo.megamog.co/',
+    period: '12/2023 – 09/2024',
+    description: {
+      en: 'Shopify theme (Insights).',
+      vi: 'Shopify theme (Insights).',
+    },
+    responsibilities: {
+      en: [
+        'Developed theme features with HTML/CSS, Liquid, JavaScript and SCSS.',
+        'Created new features and optimized existing ones following Figma designs.',
+        'Supported customers with their issues.',
+      ],
+      vi: [
+        'Phát triển tính năng theme bằng HTML/CSS, Liquid, JavaScript, SCSS.',
+        'Làm tính năng mới và tối ưu tính năng có sẵn theo thiết kế Figma.',
+        'Hỗ trợ khách hàng xử lý vấn đề.',
+      ],
+    },
+    stack: ['Shopify', 'HTML/CSS', 'Liquid', 'JavaScript', 'SCSS'],
+  },
   {
     name: 'Industrial Zone Management',
     period: '01/2023 – 05/2023',

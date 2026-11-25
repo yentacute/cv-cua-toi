@@ -124,7 +124,9 @@ export const Resume = () => {
                       <span className="period">{project.period}</span>
                     </div>
                     <p className="job-summary">
-                      {project.description[lang]} · {labels.client[lang]}: {project.client[lang]} · {labels.team[lang]}: {project.teamSize}
+                      {project.description[lang]}
+                      {project.client && ` · ${labels.client[lang]}: ${project.client[lang]}`}
+                      {project.teamSize && ` · ${labels.team[lang]}: ${project.teamSize}`}
                     </p>
                     <ul className="bullets">
                       {project.responsibilities[lang].map((item) => <li key={item}>{item}</li>)}
