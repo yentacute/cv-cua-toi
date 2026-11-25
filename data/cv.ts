@@ -49,8 +49,8 @@ export const profile = {
   // Optional: add your LinkedIn URL here to show it in the header.
   linkedin: '',
   summary: {
-    en: 'Frontend developer with 5+ years of experience building web products with React, Next.js and Vue.js. Currently building internal applications with React and Vue.js at F88, and comfortable with Next.js (App Router, static export, TypeScript). Started by crafting pixel-perfect Shopify, BigCommerce and Magento storefronts for clients in Australia and Europe, then moved on to internal business systems (dashboards, ERP/MES tools). Uses AI tools daily (Claude Code, ChatGPT, GitHub Copilot) to ship faster: scaffolding, refactoring, debugging and writing tests, always reviewing the output. Detail-oriented, quick to pick up new technologies, and used to working directly with international clients to clarify requirements and ship on time.',
-    vi: 'Lập trình viên Frontend với hơn 5 năm kinh nghiệm phát triển web bằng React, Next.js và Vue.js. Hiện đang xây dựng ứng dụng nội bộ bằng React và Vue.js tại F88, thành thạo Next.js (App Router, static export, TypeScript). Bắt đầu với việc xây dựng giao diện Shopify, BigCommerce, Magento chuẩn pixel-perfect cho khách hàng Úc và châu Âu, sau đó phát triển các hệ thống nội bộ (dashboard, công cụ ERP/MES). Sử dụng công cụ AI hằng ngày (Claude Code, ChatGPT, GitHub Copilot) để làm việc nhanh hơn: dựng khung code, refactor, debug, viết test, luôn tự review kết quả. Tỉ mỉ, học công nghệ mới nhanh, quen làm việc trực tiếp với khách hàng nước ngoài để làm rõ yêu cầu và bàn giao đúng hạn.',
+    en: 'Frontend developer with 5+ years of experience building web products with React, Next.js and Vue.js. Currently building internal applications with React and Vue.js at F88, and comfortable with Next.js (App Router, static export, TypeScript). Started by crafting pixel-perfect Shopify, BigCommerce and Magento storefronts for clients in Australia and Europe, then moved on to internal business systems (dashboards, ERP/MES tools). Uses Claude and Claude Code daily to ship faster: scaffolding, refactoring, debugging and writing tests, always reviewing the output. Detail-oriented, quick to pick up new technologies, and used to working directly with international clients to clarify requirements and ship on time.',
+    vi: 'Lập trình viên Frontend với hơn 5 năm kinh nghiệm phát triển web bằng React, Next.js và Vue.js. Hiện đang xây dựng ứng dụng nội bộ bằng React và Vue.js tại F88, thành thạo Next.js (App Router, static export, TypeScript). Bắt đầu với việc xây dựng giao diện Shopify, BigCommerce, Magento chuẩn pixel-perfect cho khách hàng Úc và châu Âu, sau đó phát triển các hệ thống nội bộ (dashboard, công cụ ERP/MES). Sử dụng Claude và Claude Code hằng ngày để làm việc nhanh hơn: dựng khung code, refactor, debug, viết test, luôn tự review kết quả. Tỉ mỉ, học công nghệ mới nhanh, quen làm việc trực tiếp với khách hàng nước ngoài để làm rõ yêu cầu và bàn giao đúng hạn.',
   } satisfies Localized,
 };
 
@@ -383,7 +383,7 @@ export const skills: SkillGroup[] = [
   },
   {
     title: { en: 'AI-assisted development', vi: 'Phát triển với AI' },
-    items: ['Claude Code', 'ChatGPT', 'GitHub Copilot', 'Prompt engineering', 'AI code review & debugging'],
+    items: ['Claude', 'Claude Code', 'Prompt engineering', 'AI code review & debugging'],
   },
   {
     title: { en: 'Frontend', vi: 'Frontend' },
@@ -412,7 +412,7 @@ export const strengths: LocalizedList = {
   en: [
     '5+ years of hands-on frontend experience',
     'Hands-on with React and Next.js, plus Vue 2/3',
-    'AI-assisted development: faster delivery with Claude Code, ChatGPT and Copilot',
+    'AI-assisted development: faster delivery with Claude and Claude Code',
     'Worked with clients in Australia and Europe',
     'Pixel-perfect delivery from Figma/PSD',
     'Quick to learn new technologies',
@@ -420,7 +420,7 @@ export const strengths: LocalizedList = {
   vi: [
     'Hơn 5 năm kinh nghiệm thực tế về frontend',
     'Có kinh nghiệm thực tế với React, Next.js và Vue 2/3',
-    'Phát triển với AI: tăng tốc công việc bằng Claude Code, ChatGPT, Copilot',
+    'Phát triển với AI: tăng tốc công việc bằng Claude và Claude Code',
     'Làm việc với khách hàng Úc và châu Âu',
     'Giao diện chuẩn pixel-perfect từ Figma/PSD',
     'Học công nghệ mới nhanh',
