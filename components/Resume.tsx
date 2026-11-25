@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { experience, labels, languages, profile, skills, strengths, type Lang } from '@/data/cv';
+import { education, experience, labels, languages, profile, projects, skills, strengths, type Lang } from '@/data/cv';
 
 const LANG_KEY = 'cv-lang';
 
@@ -61,7 +61,9 @@ export const Resume = () => {
             <li><a href={`tel:${profile.phone.replace(/\s/g, '')}`}>{profile.phone}</a></li>
             <li>{profile.location[lang]}</li>
             <li><a href={profile.github} target="_blank" rel="noreferrer">{profile.github.replace('https://', '')}</a></li>
-            <li><a href={profile.linkedin} target="_blank" rel="noreferrer">{profile.linkedin.replace('https://www.', '')}</a></li>
+            {profile.linkedin && (
+              <li><a href={profile.linkedin} target="_blank" rel="noreferrer">{profile.linkedin.replace('https://www.', '')}</a></li>
+            )}
           </ul>
         </header>
 
@@ -87,12 +89,52 @@ export const Resume = () => {
                     <ul className="bullets">
                       {job.highlights[lang].map((item) => <li key={item}>{item}</li>)}
                     </ul>
+                    {job.links && (
+                      <p className="links">
+                        {job.links.title[lang]}:{' '}
+                        {job.links.items.map((link, index) => (
+                          <span key={link.url}>
+                            {index > 0 && ', '}
+                            <a href={link.url} target="_blank" rel="noreferrer">{link.label}</a>
+                          </span>
+                        ))}
+                      </p>
+                    )}
                     <ul className="tags">
                       {job.stack.map((tech) => <li key={tech}>{tech}</li>)}
                     </ul>
                   </li>
                 ))}
               </ol>
+            </section>
+
+            <section>
+              <h2>{labels.projects[lang]}</h2>
+              <div className="projects">
+                {projects.map((project) => (
+                  <article key={project.name} className="project">
+                    <div className="job-head">
+                      <h3>
+                        {project.url ? (
+                          <a href={project.url} target="_blank" rel="noreferrer">{project.name}</a>
+                        ) : (
+                          project.name
+                        )}
+                      </h3>
+                      <span className="period">{project.period}</span>
+                    </div>
+                    <p className="job-summary">
+                      {project.description[lang]} · {labels.client[lang]}: {project.client[lang]} · {labels.team[lang]}: {project.teamSize}
+                    </p>
+                    <ul className="bullets">
+                      {project.responsibilities[lang].map((item) => <li key={item}>{item}</li>)}
+                    </ul>
+                    <ul className="tags">
+                      {project.stack.map((tech) => <li key={tech}>{tech}</li>)}
+                    </ul>
+                  </article>
+                ))}
+              </div>
             </section>
           </div>
 
@@ -114,6 +156,13 @@ export const Resume = () => {
               <ul className="bullets">
                 {strengths[lang].map((item) => <li key={item}>{item}</li>)}
               </ul>
+            </section>
+
+            <section>
+              <h2>{labels.education[lang]}</h2>
+              <p><strong>{education.school}</strong></p>
+              <p>{education.major[lang]}</p>
+              <p className="muted">{education.period} · GPA {education.gpa}</p>
             </section>
 
             <section>

@@ -138,6 +138,16 @@ h2 {
 .skill-group h3 { font-size: 13px; color: var(--muted); font-weight: 600; }
 .skill-group .tags { margin-top: 6px; }
 
+.links { margin-top: 8px; font-size: 13px; color: var(--muted); }
+.other-sites { margin-top: 16px; }
+.muted { color: var(--muted); font-size: 13px; }
+.side-col p { font-size: 14px; }
+
+.projects { display: grid; gap: 20px; }
+.project { break-inside: avoid; }
+.project h3 { font-size: 15px; }
+.project h3 a { color: var(--text); }
+
 .plain { list-style: none; margin: 0; padding: 0; font-size: 14px; display: grid; gap: 4px; }
 
 @media (max-width: 760px) {
@@ -169,7 +179,10 @@ h2 {
   .tags li { font-size: 10px; padding: 2px 8px; }
   section + section { margin-top: 18px; }
   .job { padding-bottom: 10px; break-inside: auto; }
-  .job h3 { font-size: 13px; }
+  .job h3, .project h3 { font-size: 13px; }
+  .projects { gap: 12px; }
+  .links, .muted { font-size: 11px; }
+  .side-col p { font-size: 12px; }
   .period { font-size: 11px; }
   .bullets { margin-top: 4px; }
   .bullets, .job-summary, .contact, .plain, p { line-height: 1.45; }
